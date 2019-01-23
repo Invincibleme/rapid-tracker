@@ -1,0 +1,56 @@
+.btns{
+    width: 80%;
+    margin: 20px auto;
+    text-align: center;
+
+
+button{
+    
+    width: 90%;
+    height: 90%;
+    margin: 10px 10px;
+    border-radius: 14px;
+}
+    
+}
+.section-btns{
+    height: 350px;
+    background: url("../../assets/banner.jpeg") no-repeat ;
+    background-size: auto;
+    background-position: center;
+    padding-top: 190px;
+}
+.section-works{
+    height: 200px;
+    background: black;
+    padding: 30px;
+    color: white;
+    text-align: justify;
+
+    h3{
+        text-align: center;
+    }
+    p{  
+        font-size: 14px;
+        font-style: italic;
+        font-weight: 400;
+        text-transform: capitalize;
+        font-family: sans-serif;
+    }
+}
+.submit{
+    margin: 5px 0;
+    border-radius: 14px;
+}
+
+input{
+    margin: 0;
+}
+label{
+    font-weight: 600;
+    margin: 5px 0 0 0;
+    
+}
+small{
+    margin: 0;
+}

@@ -1,4 +1,4 @@
-# RapidTracker1
+# RapidTracker
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.1.
 
@@ -21,6 +21,11 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 ## Running end-to-end tests
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+
+## Dependencies Used
+Boot Strap to Install Run `npm install bootstrap --save`.
+
+ng-bootstrap to Install Run `npm install --save @ng-bootstrap/ng-bootstrap`.
 
 ## Further help
 
