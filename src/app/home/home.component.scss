@@ -1,3 +1,5 @@
+
+
 .btns{
     width: 80%;
     margin: 20px auto;
@@ -14,12 +16,12 @@ button{
     
 }
 .section-btns{
-    height: 350px;
-    background: url("../../assets/banner.jpeg") no-repeat ;
-    background-size: auto;
-    background-position: center;
-    padding-top: 190px;
+    height: 370px;
+    background-image: linear-gradient(to right, #a517ba, #5f1782);
+    padding: 140px 0 0 0;
+      
 }
+
 .section-works{
     height: 200px;
     background: black;
@@ -54,3 +56,11 @@ label{
 small{
     margin: 0;
 }
+
+input.ng-invalid.ng-touched{
+    border: 1px solid red;
+}
+
+textarea.ng-invalid.ng-touched{
+    border: 1px solid red;
+} 

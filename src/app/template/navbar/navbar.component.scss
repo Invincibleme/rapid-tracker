@@ -1,0 +1,40 @@
+.navbar{
+    background-image: linear-gradient(to right, #a517ba, #5f1782);
+   
+   
+}
+.show{
+    background-image: linear-gradient(to right, #a517ba, #5f1782);
+}
+
+
+
+.sticky{
+    box-shadow: 0 2px 4px -1px rgba(0,0,0,.2), 
+                0 4px 5px 0 rgba(0,0,0,.14),
+                 0 1px 10px 0 rgba(0,0,0,.12);
+}
+.navbar-toggler{
+    color: white;
+    
+}
+
+.navbar-nav li a{
+    color: #fff;
+    font-weight: 600;
+}
+
+input.ng-touched{
+    border: 2px red solid;
+}
+
+// .inp{
+    
+//     // background: none;
+//     // border: none;
+//     // color: white;
+// }
+// ::placeholder{
+//     color: white;
+//     opacity: 1;
+// }

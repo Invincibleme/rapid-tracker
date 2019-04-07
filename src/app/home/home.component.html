@@ -1,14 +1,18 @@
-<section class="section-btns">
-  <div class="container btns">
-    <div class="row">
-      <div class="col-sm col-md-6 col-lg-6">
-        <button (click)="lostmodal(lost)" type="button" class="btn btn-danger btn-lg">Lost Something?</button>
-      </div>
-      <div class="col-sm col-md-6 col-lg-6">
-        <button (click)="foundmodal(found)" type="button" class="btn btn-success btn-lg">Found Something?</button></div>
+ <section class="section-btns">
+
+  <div class="row btns">
+    <div class="col-sm col-md-6 col-lg-6">
+      <button (click)="lostmodal(lost)" type="button" class="btn btn-danger btn-lg">Lost Something?</button>
     </div>
+    <div class="col-sm col-md-6 col-lg-6">
+      <button (click)="foundmodal(found)" type="button" class="btn btn-success btn-lg">Found Something?</button></div>
   </div>
-</section>
+
+
+   <!-- <img src="../../assets/wave3.png" class="wave">  -->
+
+ </section>
+
 <section class="section-works">
   <div class="container ">
     <h3>How It Works!</h3>
@@ -16,10 +20,87 @@
       and at no cost. "</p>
   </div>
 </section>
+  <h3>Lost Form</h3>
+<div class="container">
+  <form (ngSubmit)="onSubmit()" #l="ngForm">
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <label>Please Enter Your Name:</label>
+        <input ngModel name="name" type="text" class="form-control" placeholder="Name" required>
+      </div>
+      <div class="col-md-6 col-sm-12">
+        <label>Select Date:</label>
+        <input ngModel name="date" type="date" class="form-control" placeholder="date" required>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <label>Location:</label>
+        <input ngModel name="location" type="text" class="form-control" placeholder="Location Where Item was Lost" required>
+        <small class="form-text text-muted">Enter Street Address, Area, District, State, Country</small>
+      </div>
+      <div class="col-md-6 col-sm-12">
+        <label>Contact Number:</label>
+        <input ngModel name="phone" type="Number" class="form-control" placeholder="Your Phone Number" required>
+        <small class="form-text text-muted">Your Phone Will Be Visible To Anyone On This Site</small>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-lg-12">
+        <label for="Textarea1">What Is Lost?</label>
+        <textarea ngModel name="description" class="form-control" id="Textarea1" rows="3" placeholder="Describe In Details About your Item" required></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-lg-12">
+        <button [disabled]="!f.valid" type="submit" class="btn btn-outline-success btn-lg btn-block submit">Submit</button>
+      </div>
+    </div>
+  </form>
+</div>
 
+<h3>Found Form</h3>
 
+<div class="container">
+  <form (ngSubmit)="onSubmitFound()" #f="ngForm">
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <label>Please Enter Your Name:</label>
+        <input ngModel type="text" name="name" class="form-control" placeholder="Name" required>
+      </div>
+      <div class="col-md-6 col-sm-12">
+        <label>Select Date:</label>
+        <input ngModel type="date" name="date" class="form-control" placeholder="date" required>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <label>Location:</label>
+        <input ngModel type="text" name="location" class="form-control" placeholder="Location Where You Found Item" required>
+        <small class="form-text text-muted">Enter Street Address, Area, District, State, Country</small>
+      </div>
+      <div class="col-md-6 col-sm-12">
+        <label>Contact Number:</label>
+        <input ngModel type="Number" name="phone" class="form-control" placeholder="Your Phone Number" required>
+        <small class="form-text text-muted">Your Phone Will Be Visible To Anyone On This Site</small>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-lg-12">
+        <label for="Textarea1">What You Found?</label>
+        <textarea ngModel class="form-control" name="description" id="Textarea1" rows="3" placeholder="Describe What You Found" required></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-lg-12">
+        <button  type="submit" class="btn btn-outline-success btn-lg btn-block submit">Submit</button>
+      
+      </div>
+    </div>
+  </form>
+</div>
 
-<!-- Modal for lost button -->
+ <!-- Modal for lost button  -->
 
 <ng-template #lost let-modal>
   <div class="modal-header">
@@ -29,49 +110,17 @@
     </button>
   </div>
   <div class="modal-body">
-    <form>
-      <div class="row">
-        <div class="col-md-6 col-sm-12">
-          <label>Please Enter Your Name:</label>
-          <input type="text" class="form-control" placeholder="Name">
-        </div>
-        <div class="col-md-6 col-sm-12">
-          <label>Select Date:</label>
-          <input type="date" class="form-control" placeholder="date">
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6 col-sm-12">
-          <label>Location:</label>
-          <input type="text" class="form-control" placeholder="Location Where Item was Lost">
-          <small class="form-text text-muted">Enter Street Address, Area, District, State, Country</small>
-        </div>
-        <div class="col-md-6 col-sm-12">
-          <label>Contact Number:</label>
-          <input type="Number" class="form-control" placeholder="Your Phone Number">
-          <small class="form-text text-muted">Your Phone Will Be Visible To Anyone On This Site</small>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12 col-sm-12 col-lg-12">
-          <label for="Textarea1">What Is Lost?</label>
-          <textarea class="form-control" id="Textarea1" rows="3" placeholder="Describe In Details About your Item"></textarea>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12 col-sm-12 col-lg-12">
-          <button type="button" class="btn btn-outline-success btn-lg btn-block submit" (click)="modal.close('Save click')">Submit</button>
-        </div>
-      </div>
-    </form>
+    
   </div>
 </ng-template>
 
-<!-- modal ends -->
+ <!-- modal ends  -->
+
+
 
 <!-- Modal for found -->
 
-<ng-template #found let-modal>
+ <ng-template #found let-modal> 
   <div class="modal-header">
     <h6 class="modal-title" id="found">Fill This Form To Register Found Item!</h6>
     <button type="button" class="btn btn-light" aria-label="Close" (click)="modal.dismiss('Cross click')">
@@ -79,41 +128,7 @@
     </button>
   </div>
   <div class="modal-body">
-      <form>
-          <div class="row">
-            <div class="col-md-6 col-sm-12">
-              <label>Please Enter Your Name:</label>
-              <input type="text" class="form-control" placeholder="Name">
-            </div>
-            <div class="col-md-6 col-sm-12">
-              <label>Select Date:</label>
-              <input type="date" class="form-control" placeholder="date">
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-6 col-sm-12">
-              <label>Location:</label>
-              <input type="text" class="form-control" placeholder="Location Where You Found Item">
-              <small class="form-text text-muted">Enter Street Address, Area, District, State, Country</small>
-            </div>
-            <div class="col-md-6 col-sm-12">
-              <label>Contact Number:</label>
-              <input type="Number" class="form-control" placeholder="Your Phone Number">
-              <small class="form-text text-muted">Your Phone Will Be Visible To Anyone On This Site</small>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12 col-sm-12 col-lg-12">
-              <label for="Textarea1">What You Found?</label>
-              <textarea class="form-control" id="Textarea1" rows="3" placeholder="Describe What You Found"></textarea>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12 col-sm-12 col-lg-12">
-              <button type="button" class="btn btn-outline-success btn-lg btn-block submit" (click)="modal.close('Save click')">Submit</button>
-            </div>
-          </div>
-        </form>
+    
   </div>
 </ng-template>
-<!-- Modal Ends -->
+<!-- Modal Ends   -->

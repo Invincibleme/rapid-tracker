@@ -10,6 +10,7 @@ import { NavbarComponent } from './template/navbar/navbar.component';
 import { FooterComponent } from './template/footer/footer.component';
 import { ListComponent } from './view/list/list.component';
 import { HttpClientModule }    from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { HttpClientModule }    from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
